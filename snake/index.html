@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+    <style>
+    #map{
+        width: 800px;
+        height: 600px;
+        background-color: #ccc;
+        position: relative;
+        top:0;
+        left: 0;
+        display: inline-block;
+    }
+    .tips{
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+        color: skyblue;
+        background-color: orangered;
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+</head>
+
+<body>
+    <div id="map" class="map"></div>
+    <div class="tips">
+        点击地图开始游戏
+    </div>
+</body>
+<script src="./food.js"></script>
+<script src="./snack.js"></script>
+<script src="./game.js"></script>
+<script>
+   var map = document.querySelector('.map');
+
+  var game = new window.game(map);
+ map.onclick=function(){
+    game.start();
+ }
+</script>
+</html>
